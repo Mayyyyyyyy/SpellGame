@@ -16,7 +16,7 @@ const Container = (props) => {
                     disabled={disabled && disabled}
                     onKeyPress={e => handleInput(e)}
                     onChange={e=>setInputValue(e.target.value)}
-                    placeholder={disabled ? '' : 'input....'}
+                    placeholder={disabled ? '' : 'press enter to compare word'}
                 />
                 <Button className="button" type="primary" onClick={()=>handleStart()}>
                   {disabled ? 'Start' : 'Restart'}

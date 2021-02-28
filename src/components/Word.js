@@ -1,4 +1,4 @@
-export default [
+ const data =()=>{return [
     "salute",
     "abnormal",
     "recede",
@@ -13,3 +13,6 @@ export default [
     "void",
     "boycott"
 ]
+}
+
+export default data;

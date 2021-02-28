@@ -4,7 +4,7 @@ import Container from './components/Container';
 import { Layout } from 'antd';
 import Results from './components/Results';
 
-const { Header, Footer, Sider, Content } = Layout;
+const { Header,Sider, Content } = Layout;
 
 
 
@@ -12,7 +12,7 @@ const { Header, Footer, Sider, Content } = Layout;
 function App() {
   const [word, setWord] = useState(Word);
   const [newWord,setNewWord] = useState(word[0])
-  const [time,setTime] = useState(20);
+  const [time,setTime] = useState(50);
   const [inputValue,setInputValue] = useState('');
   const [disabled, setDisabled] = useState(false);
   const [num, setNum] = useState(0);
@@ -45,14 +45,15 @@ function App() {
     setNum(0);
     setRightResult([]);
     setWrongResult([]);
+    setWord(word[showWordNum]);
   }
    
   useEffect(()=>{
-     if(time<= 20 && time !==0 && disabled === false){
+     if(time<= 50 && time !==0 && disabled === false){
        setTimeout(()=>setTime(time=>time-1),1000)
      }else if (disabled) {
-       setTime(20);
-     }else if(time==0){
+       setTime(50);
+     }else if(time===0){
       setDisabled(true);
      } 
   },[disabled,time])

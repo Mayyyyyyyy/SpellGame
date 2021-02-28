@@ -45,7 +45,7 @@ function App() {
     setNum(0);
     setRightResult([]);
     setWrongResult([]);
-    setWord(word[showWordNum]);
+    setWord('salute');
   }
    
   useEffect(()=>{
